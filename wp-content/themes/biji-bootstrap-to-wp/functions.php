@@ -50,6 +50,8 @@ add_action('init', 'register_theme_menus');
 
 require_once dirname( __FILE__ ) . '/menu-item-custom-fields/menu-item-custom-fields.php'; 
 
+require_once dirname( __FILE__ ) . '/inc/custom-walker.php'; 
+
 class Menu_Item_Custom_Fields_Example {
 
 	/**

@@ -34,7 +34,8 @@
 		  	$args = array(
 				'menu' => 'header-menu',
 				'menu_class' => 'nav navbar-nav',
-				'conatiner' => 'false'
+				'conatiner' => 'false',
+				'walker' => new WPT_Walker_Nav_Menu
 			);
 		  
 		  wp_nav_menu( $args );
