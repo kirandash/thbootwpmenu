@@ -35,7 +35,7 @@
 				'menu' => 'header-menu',
 				'menu_class' => 'nav navbar-nav',
 				'conatiner' => 'false',
-				'walker' => new WPT_Walker_Nav_Menu
+				'walker' => new wp_bootstrap_navwalker
 			);
 		  
 		  wp_nav_menu( $args );

@@ -52,6 +52,8 @@ require_once dirname( __FILE__ ) . '/menu-item-custom-fields/menu-item-custom-fi
 
 require_once dirname( __FILE__ ) . '/inc/custom-walker.php'; 
 
+require_once dirname( __FILE__ ) . '/inc/wp_bootstrap_navwalker.php'; 
+
 class Menu_Item_Custom_Fields_Example {
 
 	/**
