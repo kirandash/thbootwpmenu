@@ -71,7 +71,7 @@ class Menu_Item_Custom_Fields_Example {
 		add_filter( 'manage_nav-menus_columns', array( __CLASS__, '_columns' ), 99 );
 
 		self::$fields = array(
-			'field-01' => __( 'Custom Field #1', 'menu-item-custom-fields-example' ),
+			'field-01' => __( 'Description', 'menu-item-custom-fields-example' ),
 			'field-02' => __( 'Custom Field #2', 'menu-item-custom-fields-example' ),
 		);
 	}
