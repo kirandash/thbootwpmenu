@@ -71,7 +71,7 @@ class Menu_Item_Custom_Fields_Example {
 		add_filter( 'manage_nav-menus_columns', array( __CLASS__, '_columns' ), 99 );
 
 		self::$fields = array(
-			'field-01' => __( 'Description', 'menu-item-custom-fields-example' ),
+			'field_description' => __( 'Description', 'menu-item-custom-fields-example' ),
 			'field-02' => __( 'Custom Field #2', 'menu-item-custom-fields-example' ),
 		);
 	}
@@ -94,7 +94,7 @@ class Menu_Item_Custom_Fields_Example {
 		check_admin_referer( 'update-nav_menu', 'update-nav-menu-nonce' );
 
 		foreach ( self::$fields as $_key => $label ) {
-			$key = sprintf( 'menu-item-%s', $_key );
+			$key = sprintf( '_menu_item_%s', $_key );
 
 			// Sanitize
 			if ( ! empty( $_POST[ $key ][ $menu_item_db_id ] ) ) {
@@ -128,7 +128,7 @@ class Menu_Item_Custom_Fields_Example {
 	 */
 	public static function _fields( $id, $item, $depth, $args ) {
 		foreach ( self::$fields as $_key => $label ) :
-			$key   = sprintf( 'menu-item-%s', $_key );
+			$key   = sprintf( '_menu_item_%s', $_key );
 			$id    = sprintf( 'edit-%s-%s', $key, $item->ID );
 			$name  = sprintf( '%s[%s]', $key, $item->ID );
 			$value = get_post_meta( $item->ID, $key, true );
